@@ -2,7 +2,7 @@
 /*
   Plugin Name: Our test plugin
   Description: plugin description
-  Version: 1.0
+  Version: 1.0.0
   Author: Nahuel Uboldi
   Author: URI https://nahueluboldi.com
   Text Domain: wcpdomain
@@ -17,9 +17,9 @@ class WordCountAndTimePlugin {
     add_action('init',array($this, 'languages'));
   }
  
-  // function languages() {
-  //   load_plugin_textdomain( 'wcpdomain', false, $plugin_rel_path:string|false );
-  // }
+  function languages() {
+    // load_plugin_textdomain( 'wcpdomain', false, $plugin_rel_path:string|false );
+  }
 
   function ifWrap($content) {
     if ((is_main_query() && is_single()) && (get_option('wcp_wordcount','1') || get_option('wcp_charactercount','1') || get_option('wcp_readtime','1'))) {
